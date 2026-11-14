@@ -88,3 +88,7 @@ tbody tr:hover { background: #fafaff; }
 .full { width: 100%; }
 @media (max-width: 950px) { .sidebar { width: 205px; } .main { padding: 30px 22px; } .stats { grid-template-columns: repeat(2, 1fr); } .panel-header { align-items: stretch; flex-direction: column; } }
 @media (max-width: 620px) { .app { display: block; } .sidebar { width: 100%; padding: 14px; } .brand { padding: 0 0 12px; } .sidebar-title, .sidebar-bottom { display: none; } .sidebar nav { display: flex; overflow-x: auto; gap: 8px; } .project-link { width: auto; min-width: 145px; } .main { padding: 24px 14px; } .topbar { align-items: stretch; flex-direction: column; } .stats { gap: 8px; } .stat { padding: 15px; } .stat strong { font-size: 25px; } .filters { flex-wrap: wrap; } .search { flex: 1; } .search input { width: 100%; } .dialog-head, .dialog-body { padding: 22px; } }
+
+.qa-view-tabs { display: flex; gap: 8px; margin: 10px 0 16px; }
+.qa-view-tabs button { border: 1px solid #dedbe8; background: #fff; padding: 10px 16px; border-radius: 8px; cursor: pointer; }
+.qa-view-tabs button.active { background: #6343a3; color: white; border-color: #6343a3; }

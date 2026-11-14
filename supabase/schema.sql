@@ -53,3 +53,11 @@ do $$ begin
     alter publication supabase_realtime add table public.qa_projects, public.qa_items, public.qa_attachments;
 exception when duplicate_object then null;
 end $$;
+
+-- 로그인 없이 사용하는 공개 QA 보드 정책
+create policy "public projects" on public.qa_projects for all to anon using (true) with check (true);
+create policy "public items" on public.qa_items for all to anon using (true) with check (true);
+create policy "public attachments" on public.qa_attachments for all to anon using (true) with check (true);
+create policy "public screenshot read" on storage.objects for select to anon using (bucket_id = 'qa-screenshots');
+create policy "public screenshot upload" on storage.objects for insert to anon with check (bucket_id = 'qa-screenshots');
+create policy "public screenshot delete" on storage.objects for delete to anon using (bucket_id = 'qa-screenshots');

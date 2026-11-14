@@ -5,10 +5,10 @@
   "homepage": "https://lumia-sh.github.io/qa-board/",
   "dependencies": {
     "@supabase/supabase-js": "^2.49.0",
-    "lucide-react": "^0.468.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "lucide-react": "^0.468.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,8 +28,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^6.3.0"
   }
 }
