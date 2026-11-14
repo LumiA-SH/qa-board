@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/qa-board/static/css/main.a209b40b.css",
+    "main.js": "/qa-board/static/js/main.269113af.js",
+    "index.html": "/qa-board/index.html",
+    "main.a209b40b.css.map": "/qa-board/static/css/main.a209b40b.css.map",
+    "main.269113af.js.map": "/qa-board/static/js/main.269113af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a209b40b.css",
+    "static/js/main.269113af.js"
+  ]
+}
