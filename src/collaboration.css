@@ -1,28 +1,366 @@
-.qa-identity { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin: -10px 0 25px; }
-.qa-identity label { display: flex; align-items: center; gap: 10px; color: #6f7489; font-size: 13px; font-weight: 700; }
-.qa-identity input { width: 180px; padding: 9px 11px; border: 1px solid #e3e5ee; border-radius: 8px; }
-.qa-identity small { color: #999dad; }
-.qa-group-list { display: flex; flex-wrap: wrap; gap: 7px; padding: 0 22px 18px; }
-.qa-group-chip { display: inline-flex; border: 1px solid #e7e4f4; border-radius: 8px; background: #f8f7ff; overflow: hidden; }
-.qa-group-chip button { border: 0; background: transparent; color: #6557b7; font-size: 11px; padding: 7px 9px; }
-.qa-group-chip button:hover { background: #eeeaff; }
-.qa-implemented { display: block; color: #408a65; font-size: 11px; margin-top: 8px; }
-.qa-dialog { width: min(700px, calc(100vw - 28px)); max-height: 92vh; overflow-y: auto; }
-.qa-checkbox { display: flex !important; align-items: center; gap: 9px; font-size: 13px; }
-.qa-checkbox input { width: 17px; height: 17px; accent-color: #6659d0; }
-.qa-source-meta { display: flex; flex-wrap: wrap; gap: 7px; margin: 10px 0; }
-.qa-source-meta span { background: #f2f1f8; color: #73748a; padding: 5px 8px; border-radius: 6px; font-size: 11px; }
-.qa-sources { padding: 10px; border: 1px solid #eeeef4; border-radius: 8px; font-size: 12px; }
-.qa-sources a { display: block; padding: 5px; overflow-wrap: anywhere; color: #6659d0; }
-.qa-discussion { padding: 22px 28px 28px; border-top: 1px solid #eeeef5; }
-.qa-discussion h3 { display: flex; align-items: center; gap: 8px; font-size: 15px; margin: 12px 0; }
-.qa-comments { max-height: 250px; overflow-y: auto; }
-.qa-comment { padding: 12px 0; border-bottom: 1px solid #eeeef4; }
-.qa-comment > div { display: flex; justify-content: space-between; gap: 8px; }
-.qa-comment small, .qa-history small { color: #9b9faf; font-size: 11px; }
-.qa-comment p { white-space: pre-wrap; overflow-wrap: anywhere; color: #4b5065; margin-top: 8px; }
-.qa-discussion form { display: flex; flex-direction: column; align-items: flex-end; gap: 9px; margin: 14px 0 25px; }
-.qa-discussion textarea { width: 100%; border: 1px solid #e1e3ed; border-radius: 8px; padding: 11px; resize: vertical; }
-.qa-history { padding: 10px 0; border-bottom: 1px solid #eeeef4; font-size: 12px; }
-.qa-history small { display: block; margin-top: 5px; }
-@media (max-width: 950px) { .panel-header, .topbar { flex-wrap: wrap; } .filters { flex-wrap: wrap; } .qa-dialog { width: min(700px, calc(100vw - 20px)); } }
+.qa-identity {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: -10px 0 25px;
+}
+
+.qa-identity label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6f7489;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.qa-identity input {
+    width: 180px;
+    padding: 9px 11px;
+    border: 1px solid #e3e5ee;
+    border-radius: 8px;
+}
+
+.qa-identity small {
+    color: #999dad;
+}
+
+.qa-group-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    padding: 0 22px 18px;
+}
+
+.qa-group-chip {
+    display: inline-flex;
+    border: 1px solid #e7e4f4;
+    border-radius: 8px;
+    background: #f8f7ff;
+    overflow: hidden;
+}
+
+.qa-group-chip button {
+    border: 0;
+    background: transparent;
+    color: #6557b7;
+    font-size: 11px;
+    padding: 7px 9px;
+}
+
+.qa-group-chip button:hover {
+    background: #eeeaff;
+}
+
+.qa-implemented {
+    display: block;
+    color: #408a65;
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+.qa-dialog {
+    width: min(700px, calc(100vw - 28px));
+    max-height: 92vh;
+    overflow-y: auto;
+}
+
+.qa-checkbox {
+    display: flex !important;
+    align-items: center;
+    gap: 9px;
+    font-size: 13px;
+}
+
+.qa-checkbox input {
+    width: 17px;
+    height: 17px;
+    accent-color: #6659d0;
+}
+
+.qa-source-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 10px 0;
+}
+
+.qa-source-meta span {
+    background: #f2f1f8;
+    color: #73748a;
+    padding: 5px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+}
+
+.qa-sources {
+    padding: 10px;
+    border: 1px solid #eeeef4;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.qa-sources a {
+    display: block;
+    padding: 5px;
+    overflow-wrap: anywhere;
+    color: #6659d0;
+}
+
+.qa-discussion {
+    padding: 22px 28px 28px;
+    border-top: 1px solid #eeeef5;
+}
+
+.qa-discussion h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    margin: 12px 0;
+}
+
+.qa-comments {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.qa-comment {
+    padding: 12px 0;
+    border-bottom: 1px solid #eeeef4;
+}
+
+.qa-comment > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.qa-comment small,
+.qa-history small {
+    color: #9b9faf;
+    font-size: 11px;
+}
+
+.qa-comment p {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    color: #4b5065;
+    margin-top: 8px;
+}
+
+.qa-discussion form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 9px;
+    margin: 14px 0 25px;
+}
+
+.qa-discussion textarea {
+    width: 100%;
+    border: 1px solid #e1e3ed;
+    border-radius: 8px;
+    padding: 11px;
+    resize: vertical;
+}
+
+.qa-history {
+    padding: 10px 0;
+    border-bottom: 1px solid #eeeef4;
+    font-size: 12px;
+}
+
+.qa-history small {
+    display: block;
+    margin-top: 5px;
+}
+
+.qa-list-tools {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 0 22px 14px;
+}
+
+.qa-list-tools button {
+    padding: 6px 10px;
+    border: 1px solid #e1e3ed;
+    border-radius: 7px;
+    background: #fff;
+    color: #555b70;
+    cursor: pointer;
+}
+
+.qa-list-tools span {
+    margin-left: auto;
+    font-size: 11px;
+    color: #8b90a1;
+}
+
+.qa-checklist-groups {
+    padding: 0 20px 16px;
+}
+
+.qa-checklist-group {
+    margin-bottom: 12px;
+    border: 1px solid #e7e7f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.qa-checklist-heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 16px;
+    border: 0;
+    background: #f8f7fc;
+    text-align: left;
+    cursor: pointer;
+    color: #33374b;
+}
+
+.qa-checklist-heading strong {
+    flex: 1;
+    font-size: 14px;
+}
+
+.qa-checklist-heading small {
+    font-size: 11px;
+    color: #7b8094;
+}
+
+.qa-fold-symbol {
+    color: #6659d0;
+    font-size: 20px;
+    line-height: 1;
+    width: 18px;
+    text-align: center;
+}
+
+.qa-checklist-table {
+    min-width: 780px;
+}
+
+.qa-checklist-table .qa-check-column {
+    width: 62px;
+    text-align: center;
+}
+
+.qa-checklist-table .qa-check-column input {
+    width: 18px;
+    height: 18px;
+    accent-color: #6659d0;
+    cursor: pointer;
+}
+
+.qa-title-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.qa-inline-done {
+    color: #2d7d56;
+    background: #e8f5ed;
+    border-radius: 5px;
+    padding: 2px 7px;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* QA 항목 바로 아래에 펼쳐지는 상세 편집 영역 */
+.qa-expanded-row > td {
+    padding: 0 !important;
+    background: #f7f5fc;
+    border-bottom: 2px solid #d9d0eb;
+}
+
+.qa-inline-editor {
+    width: 100%;
+    padding: 22px 26px 26px;
+    background: #f9f8fc;
+    text-align: left;
+    cursor: default;
+}
+
+.qa-inline-editor .dialog-head {
+    padding: 0 0 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #dedbe8;
+}
+
+.qa-inline-editor .dialog-body {
+    padding: 0;
+    max-width: 100%;
+}
+
+.qa-inline-editor .qa-discussion {
+    padding: 20px 0 0;
+    border-top: 1px solid #dedbe8;
+}
+
+.qa-inline-editor .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.qa-inline-editor input:not([type="checkbox"]):not([type="file"]),
+.qa-inline-editor select,
+.qa-inline-editor textarea {
+    width: 100%;
+    min-width: 0;
+}
+
+.qa-checklist-table tr.qa-expanded-row:hover {
+    background: #f9f8fc;
+}
+
+@media (max-width: 950px) {
+    .panel-header,
+    .topbar {
+        flex-wrap: wrap;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .qa-dialog {
+        width: min(700px, calc(100vw - 20px));
+    }
+}
+
+@media (max-width: 700px) {
+    .qa-list-tools {
+        padding: 0 12px 12px;
+    }
+
+    .qa-list-tools span {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .qa-checklist-groups {
+        padding: 0 10px 12px;
+    }
+
+    .qa-checklist-heading {
+        padding: 12px;
+    }
+
+    .qa-inline-editor {
+        padding: 16px 12px;
+    }
+
+    .qa-inline-editor .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
